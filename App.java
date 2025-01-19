@@ -1,104 +1,3 @@
-Claro, a continuación te proporciono un ejemplo de documentación para tu proyecto **PriceListPro**. La documentación incluirá la descripción general del proyecto, su funcionamiento, cómo ejecutarlo, y los detalles de las clases que componen el programa.
-
----
-
-# **Documentación de PriceListPro**
-
-## **Descripción General**
-
-**PriceListPro** es una aplicación de escritorio desarrollada en Java utilizando `Swing` para la creación de interfaces gráficas. Su propósito es permitir a los usuarios gestionar una lista de productos, asignarles precios y calcular el total de la compra. Además, permite al usuario guardar, eliminar y limpiar los productos en la lista.
-
-El sistema tiene una interfaz simple que permite al usuario:
-- Ingresar productos y sus respectivos precios.
-- Mostrar estos productos en una tabla.
-- Calcular el total de los precios de los productos ingresados.
-- Eliminar el último producto ingresado.
-- Limpiar completamente la lista de productos.
-
-## **Requisitos**
-
-- **Java 8 o superior**.
-- **IDE** (como IntelliJ IDEA, Eclipse o NetBeans) para desarrollo en Java.
-
-## **Estructura del Proyecto**
-
-El proyecto está compuesto por las siguientes clases:
-
-1. **App.java**: Contiene la interfaz gráfica principal y la lógica de la aplicación.
-2. **PriceListPro.java**: La clase principal que arranca la aplicación.
-3. **fonts.java**: Una pequeña utilidad que lista las fuentes disponibles en el sistema (no es esencial para el funcionamiento principal del proyecto).
-
-## **Clases y Funcionalidad**
-
-### **1. App.java**
-
-La clase `App` define la ventana principal de la aplicación utilizando `JFrame` de Java Swing. En esta clase se gestionan los componentes de la interfaz gráfica, como etiquetas, campos de texto, botones y la tabla para mostrar los productos.
-
-#### Métodos principales:
-
-- **`iniciar()`**:
-    - Inicializa los componentes gráficos, incluyendo la tabla para los productos, los botones para guardar, calcular el total, borrar y limpiar.
-    - Organiza los componentes utilizando `BorderLayout` y `FlowLayout`.
-    - Proporciona la lógica para agregar productos a la tabla, calcular el total y manejar eventos de los botones.
-  
-### **2. PriceListPro.java**
-
-La clase `PriceListPro` se encarga de iniciar la aplicación y mostrar la interfaz principal.
-
-#### Método principal:
-
-- **`main(String[] Args)`**:
-    - Crea una instancia de la clase `App` y ejecuta el método `iniciar()` para mostrar la interfaz gráfica de la aplicación.
-
-### **3. fonts.java**
-
-Esta clase es una utilidad que imprime en la consola todas las fuentes disponibles en el sistema, utilizando la clase `GraphicsEnvironment` de Java. No es esencial para el funcionamiento de la aplicación principal pero puede ser útil si se desea explorar las fuentes disponibles.
-
-#### Método principal:
-
-- **`main(String[] Args)`**:
-    - Muestra todas las fuentes disponibles en el sistema en formato de lista.
-
-## **Interfaz de Usuario**
-
-La interfaz de usuario está organizada en un diseño limpio y sencillo. Utiliza componentes como `JLabel`, `JTextField`, `JButton` y `JTable` para interactuar con el usuario.
-
-- **Tabla de productos**: La tabla muestra los productos ingresados, con las columnas "Producto" y "Precio".
-- **Campos de entrada**: Permiten al usuario ingresar el nombre del producto y el precio.
-- **Botones**:
-  - **Guardar**: Agrega un producto y su precio a la lista.
-  - **Total**: Calcula y muestra el total de los productos ingresados.
-  - **Limpiar**: Elimina todos los productos de la lista.
-  - **Eliminar último producto**: Elimina el último producto agregado.
-
-## **Instrucciones de Ejecución**
-
-### Para ejecutar la aplicación:
-
-1. **Compilar el código**:
-    - Si estás usando un IDE como IntelliJ IDEA o Eclipse, simplemente compila el proyecto.
-    - Si estás trabajando en la terminal, navega hasta la carpeta del proyecto y ejecuta:
-      ```
-      javac *.java
-      ```
-
-2. **Ejecutar la aplicación**:
-    - Si usas un IDE, simplemente ejecuta la clase `PriceListPro.java`.
-    - Si prefieres la terminal, ejecuta el siguiente comando:
-      ```
-      java PriceListPro
-      ```
-
-3. **Usar la aplicación**:
-    - La aplicación se abrirá mostrando una ventana con campos de entrada para el producto y su precio.
-    - Los productos y precios ingresados se mostrarán en la tabla, y puedes calcular el total o limpiar la lista de productos.
-
-
-## **Código**
-
-Aquí te dejo el código del archivo principal `App.java` con comentarios explicativos de cada parte del código:
-
-```java
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -112,7 +11,6 @@ public class App extends JFrame {
     DefaultTableModel model = new DefaultTableModel();
 
     public void iniciar() {
-        // Declaración de etiquetas y campos
         JLabel productoLabel, precioLabel, lbl1, totalbl;
         JTextField productofField, preciofField;
 
@@ -221,9 +119,7 @@ public class App extends JFrame {
         // Panel para los botones
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 10));
-        buttonPanel.add
-
-(guardarButton);
+        buttonPanel.add(guardarButton);
         buttonPanel.add(totalButton);
         buttonPanel.add(limpButton);
 
@@ -262,10 +158,3 @@ public class App extends JFrame {
         frame1.iniciar();
     }
 }
-```
-
----
-
-## **Conclusión**
-
-PriceListPro es una herramienta útil para gestionar productos y calcular el total de compras. La interfaz gráfica es sencilla y fácil de usar, y el código está bien organizado para facilitar su mantenimiento y futuras ampliaciones.
