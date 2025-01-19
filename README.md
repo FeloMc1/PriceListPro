@@ -1,5 +1,3 @@
-Claro, a continuación te proporciono un ejemplo de documentación para tu proyecto **PriceListPro**. La documentación incluirá la descripción general del proyecto, su funcionamiento, cómo ejecutarlo, y los detalles de las clases que componen el programa.
-
 ---
 
 # **Documentación de PriceListPro**
