@@ -1,5 +1,3 @@
----
-
 # **Documentación de PriceListPro**
 
 ## **Descripción General**
